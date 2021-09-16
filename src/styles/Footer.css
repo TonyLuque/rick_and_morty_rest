@@ -1,0 +1,16 @@
+.container {
+  background-image: url("../assets/footer_overlay.png"),
+    url("../assets/footer_portal_morty_smith_rick.png");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  height: 50px;
+}

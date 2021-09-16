@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import getCharacters from "../api/getCharacters";
+import { Footer } from "../components/Footer";
 
 const Characters = () => {
   const [data, setData] = useState([]);
@@ -19,6 +20,7 @@ const Characters = () => {
     <div>
       oa
       {oa}
+      <Footer />
     </div>
   );
 };
