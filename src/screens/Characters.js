@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import getCharacters from "../api/getCharacters";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 
 const Characters = () => {
   const [data, setData] = useState([]);
@@ -12,14 +13,14 @@ const Characters = () => {
 
   console.log(data);
 
-  let oa = data.map((e) => {
+  const oa = data.map((e) => {
     return <p>{e.name}</p>;
   });
 
   return (
     <div>
-      oa
-      {oa}
+      <Header />
+      <div>{oa}</div>
       <Footer />
     </div>
   );

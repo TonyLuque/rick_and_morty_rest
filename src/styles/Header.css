@@ -1,6 +1,5 @@
-.containerFooter {
-  background-image: url("../assets/footer_overlay.png"),
-    url("../assets/footer_portal_morty_smith_rick.png");
+.containerHeader {
+  background-image: url("../assets/bg_header.png");
   background-color: rgba(0, 0, 0, 0.7);
   background-size: cover;
   background-position: center;
@@ -11,6 +10,6 @@
   justify-content: center;
 }
 
-.imagFooter {
-  height: 50px;
+.imageHeader {
+  height: 122px;
 }

@@ -6,8 +6,8 @@ import "../../styles/Footer.css";
 
 export const Footer = () => {
   return (
-    <_Container className="container">
-      <img className="image" src={horizontal} alt="" />
+    <_Container className="containerFooter">
+      <img className="imagFooter" src={horizontal} alt="" />
     </_Container>
   );
 };
