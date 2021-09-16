@@ -1,0 +1,30 @@
+.container {
+  background-image: url("../assets/overlay.png"),
+    url("../assets/portal-morty-smith-rick.png");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.imageLogo1 {
+  height: 50px;
+}
+
+.imageLogo2 {
+  height: 264px;
+}
+
+.textTitle {
+  font-size: 36px;
+}
+
+.textDescription {
+  font-size: 18px;
+}
