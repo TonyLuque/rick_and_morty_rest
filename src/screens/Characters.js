@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import getCharacters from "../api/getCharacters";
+import { CharacterCard } from "../components/CharacterCard";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
@@ -14,7 +15,18 @@ const Characters = () => {
   console.log(data);
 
   const oa = data.map((e) => {
-    return <p>{e.name}</p>;
+    return (
+      <CharacterCard
+        id={e.id}
+        key={e.id}
+        title={e.name}
+        status={e.status}
+        type={e.species}
+        image={e.image}
+        lastLocation={e.location.name}
+        firstChapter={e.episode[0]}
+      />
+    );
   });
 
   return (
