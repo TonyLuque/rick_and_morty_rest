@@ -7,7 +7,7 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/" component={Inicio} />
-        <Route exact path="/characters" component={Characters} /> */}
+        <Route exact path="/characters" component={Characters} />
         {/* {/* <Route exact path="/signup" component={Signup} /> */}
       </Switch>
     </div>
