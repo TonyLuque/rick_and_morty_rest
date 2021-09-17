@@ -29,6 +29,7 @@ export const CharacterCard = ({
 
   useEffect(() => {
     getEpisodeById(episodeId).then((res) => setData(res.data));
+    // eslint-disable-next-line
   }, []);
 
   return (

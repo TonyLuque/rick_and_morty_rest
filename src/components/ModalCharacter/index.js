@@ -18,6 +18,7 @@ export const ModalCharacter = ({ id, show, ...othersProps }) => {
 
   useEffect(() => {
     getCharacterById(id).then((res) => setData(res.data));
+    // eslint-disable-next-line
   }, []);
 
   // console.log(data);

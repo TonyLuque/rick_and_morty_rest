@@ -8,6 +8,7 @@ export const CardInfoEpisodes = ({ smallTitle, description, date, url }) => {
 
   useEffect(() => {
     getEpisodeById(url).then((res) => setData(res.data));
+    // eslint-disable-next-line
   }, []);
 
   return (
