@@ -5,6 +5,7 @@ export const _Container = styled.div`
   border-radius: 60px;
   padding: 11px 20px;
   cursor: pointer;
+  color: white;
 `;
 
 export const _Text = styled.p`

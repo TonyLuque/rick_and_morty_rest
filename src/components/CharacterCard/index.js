@@ -23,7 +23,7 @@ export const CharacterCard = ({
   ...otherProps
 }) => {
   const [data, setData] = useState([]);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState();
 
   useEffect(() => {
     getEpisodeById(id).then((res) => setData(res.data));

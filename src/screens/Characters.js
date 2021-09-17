@@ -14,7 +14,7 @@ const Characters = () => {
     getCharacters().then((res) => setData(res.data.results));
   }, []);
 
-  const oa = data.map((e) => {
+  const cards = data.map((e) => {
     return (
       <CharacterCard
         id={e.id}
@@ -32,7 +32,7 @@ const Characters = () => {
   return (
     <div>
       <Header />
-      <div className="containerCharacters">{oa}</div>
+      <div className="containerCharacters">{cards}</div>
       <Footer />
     </div>
   );
