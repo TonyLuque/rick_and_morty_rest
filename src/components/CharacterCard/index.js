@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import getEpisodeById from "../../api/getEpisodeById";
 /* eslint-disable react/jsx-pascal-case */
-import getCharacterById from "../../api/getCharacterById";
 import { ModalCharacter } from "../ModalCharacter";
 import {
   _Container,
@@ -25,11 +25,9 @@ export const CharacterCard = ({
   const [data, setData] = useState([]);
   const [show, setShow] = useState(false);
 
-  //   useEffect(() => {
-  //     getCharacterById(id).then((res) => setData(res.data));
-  //   }, []);
-
-  //   console.log(data);
+  useEffect(() => {
+    getEpisodeById(id).then((res) => setData(res.data));
+  }, []);
 
   return (
     <_Container onClick={() => setShow(true)} {...otherProps}>
@@ -47,7 +45,7 @@ export const CharacterCard = ({
         </_GroupText>
         <_GroupText>
           <_SmallText title>First seen in:</_SmallText>
-          <_MediumText>{firstChapter}</_MediumText>
+          <_MediumText>{data.name}</_MediumText>
         </_GroupText>
       </_MiddleContainer>
       {show ? <ModalCharacter id={id} /> : null}
