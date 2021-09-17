@@ -32,7 +32,12 @@ export const ModalCharacter = ({ id, show, ...othersProps }) => {
   }
 
   return (
-    <_ContainerModal {...othersProps}>
+    <_ContainerModal
+      onClick={() => {
+        window.location.reload();
+      }}
+      {...othersProps}
+    >
       <_Container>
         <_Close
           onClick={() => {
