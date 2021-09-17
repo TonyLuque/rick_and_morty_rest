@@ -8,7 +8,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Inicio} />
         <Route exact path="/characters" component={Characters} />
-        <Redirect to="/characters" />
+        <Redirect to="/" />
         {/* {/* <Route exact path="/signup" component={Signup} /> */}
       </Switch>
     </BrowserRouter>
