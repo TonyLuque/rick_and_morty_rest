@@ -8,6 +8,7 @@ export const _Container = styled.div`
   margin: 0px 22px 22px 0px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
+  float: left;
 `;
 
 export const _MiddleContainer = styled.div`

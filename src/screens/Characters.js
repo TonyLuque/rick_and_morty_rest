@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import "../styles/Characters.css";
+
 import getCharacters from "../api/getCharacters";
 import { CharacterCard } from "../components/CharacterCard";
 import { Footer } from "../components/Footer";
@@ -10,9 +12,7 @@ const Characters = () => {
 
   useEffect(() => {
     getCharacters().then((res) => setData(res.data.results));
-  }, [data]);
-
-  console.log(data);
+  }, []);
 
   const oa = data.map((e) => {
     return (
@@ -32,7 +32,7 @@ const Characters = () => {
   return (
     <div>
       <Header />
-      <div>{oa}</div>
+      <div className="containerCharacters">{oa}</div>
       <Footer />
     </div>
   );

@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react";
 /* eslint-disable react/jsx-pascal-case */
+import getCharacterById from "../../api/getCharacterById";
+import { ModalCharacter } from "../ModalCharacter";
 import {
   _Container,
   _GroupText,
@@ -10,6 +13,7 @@ import {
 } from "./styles";
 
 export const CharacterCard = ({
+  id,
   title,
   image,
   status,
@@ -18,8 +22,17 @@ export const CharacterCard = ({
   firstChapter,
   ...otherProps
 }) => {
+  const [data, setData] = useState([]);
+  const [show, setShow] = useState(false);
+
+  //   useEffect(() => {
+  //     getCharacterById(id).then((res) => setData(res.data));
+  //   }, []);
+
+  //   console.log(data);
+
   return (
-    <_Container {...otherProps}>
+    <_Container onClick={() => setShow(true)} {...otherProps}>
       <_MiddleContainer>
         <_Image src={image} alt="character" />
       </_MiddleContainer>
@@ -37,6 +50,7 @@ export const CharacterCard = ({
           <_MediumText>{firstChapter}</_MediumText>
         </_GroupText>
       </_MiddleContainer>
+      {show ? <ModalCharacter id={id} /> : null}
     </_Container>
   );
 };
