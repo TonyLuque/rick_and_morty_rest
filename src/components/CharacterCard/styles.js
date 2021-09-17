@@ -9,6 +9,7 @@ export const _Container = styled.div`
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   float: left;
+  cursor: pointer;
 `;
 
 export const _MiddleContainer = styled.div`

@@ -1,10 +1,12 @@
- 
-import { apiClient } from './client'
+import { apiClient } from "./client";
 
-const getCharacters = () => {
-  return apiClient.get(
-    `/character`,
-  )   
-}
+const getCharacters = (page) => {
+  return apiClient.get(`/character?page=${page ? page : "1"}`, {
+    mode: "cors",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
+};
 
-export default getCharacters
+export default getCharacters;

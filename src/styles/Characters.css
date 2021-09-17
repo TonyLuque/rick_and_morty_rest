@@ -3,4 +3,13 @@
   padding-top: 50px;
   padding-bottom: 50px;
   width: 80%;
+  overflow-y: auto;
+}
+
+.containerButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 16px;
 }

@@ -29,7 +29,6 @@ export const ModalCharacter = ({ id, show, ...othersProps }) => {
       return <CardInfoEpisodes key={index} url={idEpisode} />;
     });
   }
-  console.log(data);
 
   return (
     <_ContainerModal {...othersProps}>

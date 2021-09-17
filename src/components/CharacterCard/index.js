@@ -25,8 +25,10 @@ export const CharacterCard = ({
   const [data, setData] = useState([]);
   const [show, setShow] = useState();
 
+  const episodeId = firstChapter.replace(/[a-zA-Z://.]+/g, "");
+
   useEffect(() => {
-    getEpisodeById(id).then((res) => setData(res.data));
+    getEpisodeById(episodeId).then((res) => setData(res.data));
   }, []);
 
   return (
